@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+
+/* || Variables */
+
+:root {
+    --header-height: 12rem;
+
+    --main-margin-size: 3.5rem;
+    --main-border-width: 0.2rem;
+    --main-border-color: solid #cccccc;
+    --main-border-radius: 1.5rem;
+
+    --chess-symbol-size: 3.5rem;
+
+    --color-h1-nav-footer: #eeeeee;
+}
+
+
+/* || Layout */
+
+body {
+    position: relative;
+    max-width: 90ch;
+    margin: auto;
+}
+
+header {
+    height: var(--header-height);
+}
+
+main {
+    padding: 1rem var(--main-margin-size);
+} 
+
+section {
+    padding-bottom: 0.2rem;
+}
+
+
+/* || Backgrounds */
+
+header {
+    background-image:url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/chessboxing/chessboxing_background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* || Colours */
+
+body {
+    background-color: #bbbbbb;
+}
+
+main {
+    background-color: #ffffff;
+} 
+
+header, footer {
+    background-color: #000000;
+}
+
+nav li:hover{
+    background-color: rgba( 255, 255, 255, 0.3);
+}
+
+nav li:hover a{
+    color: #ffff00;
+}
+
+footer p {
+    color: var(--color-h1-nav-footer);
+}
+
+h1 {
+    color: var(--color-h1-nav-footer);
+}
+
+h2 {
+    color: #607293;
+}
+
+a {
+    color: var(--color-h1-nav-footer);
+}
+
+.fig_media-with-caption {
+    border: var(--main-border-color);
+}
+
+#table-map-figure {
+    border: var(--main-border-color);
+}
+
+
+/* || Fonts */
+
+html {
+    font-size: 14pt;
+    font-family: 'Crimson Text', 'serif';
+}
+
+main {
+    line-height: 1.4rem;
+}
+
+/* removes underline from links */
+nav a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+h1,h2,nav {
+    font-family: 'Kanit', 'Avenir-Black', 'sans-serif';
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote cite {
+    font-style: normal;
+}
+
+#table-map-figure table {
+    font-size: 0.8rem;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+
+/* || Header and Navigation */
+
+header {
+    position: relative;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: var(--main-margin-size);
+    border-right: var(--main-margin-size);
+    border-style: solid;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* displays menu items horizontally */
+nav li {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+}
+
+/* Ensures nav is alligned right with right edge of main text */
+nav li:last-child {
+    padding-right: 0;
+}
+
+/* || Main Content Block */
+
+/* Increases line spacing for bullet lists */
+#sec_rules li, #sec_training li {
+    padding-bottom: 0.4rem;
+}
+
+
+/* |||| Added Text Symbols */
+
+#h2_history:before {
+    content: '\2655 ';
+    font-size: var(--chess-symbol-size);
+    font-family: 'Kanit', 'DejaVu Sans', 'Segoe UI Symbol', 'sans-serif';
+}
+
+#h2_rules:before {
+    content: '\265a ';
+    font-size: var(--chess-symbol-size);
+    font-family: 'Kanit', 'DejaVu Sans', 'Segoe UI Symbol', 'sans-serif';
+}
+
+#h2_training:before {
+    content: '\2656 ';
+    font-size: var(--chess-symbol-size);
+    font-family: 'Kanit', 'DejaVu Sans', 'Segoe UI Symbol', 'sans-serif';
+}
+
+#h2_man-v-machine:before {
+    content: '\265d ';
+    font-size: var(--chess-symbol-size);
+    font-family: 'Kanit', 'DejaVu Sans', 'Segoe UI Symbol', 'sans-serif';
+}
+
+
+/* |||| Figures */
+
+.fig_media-with-caption {
+    border-width: var(--main-border-width);
+    border-radius: var( --main-border-radius);
+    max-width: 19.5rem;
+    float: right;
+    margin: 0 0 0 1.5rem;
+    padding: 1rem;
+}
+
+.fig_media-with-caption img {
+    max-width: 100%;
+}
+
+.fig_media-with-caption figcaption {
+    text-align: center;
+}
+
+.fig_media-with-caption iframe {
+    max-width: 100%;
+    border: 0;
+    margin: auto;
+    display: block;
+}
+
+/* ---------- */
+
+#table-map-figure {
+    border-width: var(--main-border-width);
+    border-radius: var(--main-border-radius);
+    margin: 0;
+    padding: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#table-map-figure figcaption {
+    text-align: center;
+    margin-bottom: 0.6rem;
+    flex: 0 0 100%;
+}
+
+#table-map-figure table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+#table-map-figure th {
+    border-top: 0.11rem var(--main-border-color);
+    border-bottom: 0.11rem var(--main-border-color);
+}
+
+#table-map-figure tr,td {
+    border-bottom: 0.05rem var(--main-border-color);
+    padding: 0.27rem;
+}
+
+#table-map-figure img {
+    margin: auto;
+    max-width: 58%;
+}
+
+
+/* || Footer */
+
+footer {
+    position: relative;
+    height: 5rem;
+    padding: 0.5rem;
+}
+
+/* Centres text horizonally & vertically */
+footer p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* || Media Queries */
+
+/* Makes the map image 100% max-width when it wraps to next line */
+@media only screen and (max-width: 807px) {
+    #table-map-figure img {
+        max-width: 100%;
+    }
+}
+
+/* Makes first two figures expand to full width of main when LH text wraps underneath */
+@media only screen and (max-width: 695px) {
+    .fig_media-with-caption {
+        float: none;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+/* The next two media queries gradually decrease the padding of content block & header border, and gradually increase the header height */
+@media only screen and (max-width: 630px) {
+    main {
+        padding: 1rem calc(var(--main-margin-size) * 0.7);
+    }
+
+    header {
+        border-left: solid calc(var(--main-margin-size) * 0.7);
+        border-right: solid calc(var(--main-margin-size) * 0.7);
+        height: calc(var(--header-height) * 1.1);
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    main {
+        padding: 1rem calc(var(--main-margin-size) * 0.4);
+    }
+
+    header {
+        border-left: solid calc(var(--main-margin-size) * 0.4);
+        border-right: solid calc(var(--main-margin-size) * 0.4);
+        height: calc(var(--header-height) * 1.2);
+    }
+}
+
+/* Moves menu to right of header, sets final narrow viewport content padding and header height, and reduces h1 size */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 1rem calc(var(--main-margin-size) * 0.1);
+    }
+
+    header {
+        height: calc(var(--header-height) * 1.3);
+        border: 0;
+    }
+
+    nav li {
+        display: block;
+        text-align: right;
+        padding: 0.3rem calc(var(--main-margin-size) * 0.1);
+    }
+
+    nav li:last-child {
+        padding-right: calc(var(--main-margin-size) * 0.1);
+    }
+
+    h1 {
+        top: 20%;
+        font-size: 2.8rem;
+        padding-left: calc(var(--main-margin-size) * 0.1) !important;
+    }
+
+    .fig_media-with-caption {
+        margin: 1.05rem;
+    }
+}
+
+
+/* Next 3 queries further adjust h1 as width of viewport decreases */
+@media only screen and (max-width: 450px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 370px) {
+    h1 {
+        font-size: 1.8rem;
+    }    
+}
+
+@media only screen and (max-width: 290px) {
+    h1 {
+        font-size: 1.5rem;
+    }    
+}
